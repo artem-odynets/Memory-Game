@@ -1,0 +1,94 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    background: linear-gradient(100deg, #333333, #cf1313);
+    background-size: 400%, 400%;
+    animation: gradient 7s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%, 25%;
+    } 
+    25% {
+        background-position: 25%, 50%;
+    }
+    50% {
+        background-position: 50%, 75%;
+    } 
+    75% {
+        background-position: 25% 50%;
+    }
+    100% {
+        background-position: 0%, 25%;
+    }
+}
+.wrapper {
+  position: relative;
+  height: 100vh;
+  display: flex;
+ 
+}
+.reboot {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    cursor: pointer;
+   
+  }
+  
+  .reboot:hover {
+   
+      border-radius: 50%;
+  }
+.memory__game {
+   
+  width: 650px;
+  height: 650px;
+  display: flex;
+  margin: auto;
+  flex-flow: row wrap;
+  perspective: 1000px;
+}
+.image__card.flip {
+  transform: rotateY(180deg);
+}
+
+.image__card {
+  width: calc(25% - 10px);
+  height: calc(33.33% - 10px);
+  transform: scale(1);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  margin: 5px;
+}
+
+/*.image__card:active {
+    transform: scale(0.97);
+    transition: trans*/
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #a8a6a6;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}

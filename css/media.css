@@ -1,0 +1,20 @@
+@media(max-width: 856px) {
+    .front-face,
+    .back-face {
+        padding: 10px;
+       
+    }
+    .image__card {
+        width: calc(25% - 8px);
+        height: calc(30.33% - 8px);
+        transform: scale(1);
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+        margin: 4px;
+        
+    }
+    .reboot {
+        display: none;
+    }
+}
